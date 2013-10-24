@@ -55,13 +55,13 @@ public class TestBeanTest {
 	public void testBool() {
 		final TestBean bean = new TestBean();
 		bean.setBoolValue(FAKE_BOOL);
-		assertSame(FAKE_BOOL,bean.getBoolValue());
+		assertEquals(FAKE_BOOL,bean.getBoolValue());
 	}
 	
 	@Test
 	public void testDate() {
 		final TestBean bean = new TestBean();
 		bean.setDateValue(FAKE_DATE);
-		assertSame(FAKE_DATE,bean.getDateValue());
+		assertEquals(FAKE_DATE,bean.getDateValue());
 	}
 }

@@ -17,9 +17,20 @@ public final class TestBean {
 	private Boolean boolValue;
 	private Date dateValue;
 
+	/**
+	 * Default constructor
+	 */
 	public TestBean() {
 	}
 
+	/**
+	 * Constructor
+	 * @param id
+	 * @param stringValue
+	 * @param intValue
+	 * @param boolValue
+	 * @param dateValue
+	 */
 	public TestBean(String id, String stringValue, Integer intValue,
 			Boolean boolValue, Date dateValue) {
 		super();
@@ -30,42 +41,78 @@ public final class TestBean {
 		this.dateValue = (Date) dateValue.clone();
 	}
 
+	/**
+	 * Returns id
+	 * @return
+	 */
 	public String getId() {
 		return id;
 	}
 
+	/**
+	 * Sets the id
+	 * @param id
+	 */
 	public void setId(String id) {
 		this.id = id;
 	}
 
+	/**
+	 * Returns a string value
+	 * @return
+	 */
 	public String getStringValue() {
 		return stringValue;
 	}
 
+	/**
+	 * Sets a string value
+	 */
 	public void setStringValue(String stringValue) {
 		this.stringValue = stringValue;
 	}
 
+	/**
+	 * Returns an int value
+	 * @return
+	 */
 	public Integer getIntValue() {
 		return intValue;
 	}
 
+	/**
+	 * Sets an int value
+	 */
 	public void setIntValue(Integer intValue) {
 		this.intValue = intValue;
 	}
 
+	/**
+	 * Returns a boolean value
+	 * @return
+	 */
 	public Boolean getBoolValue() {
 		return boolValue;
 	}
 
+	/**
+	 * Sets a boolean value
+	 */
 	public void setBoolValue(Boolean boolValue) {
 		this.boolValue = boolValue;
 	}
 
+	/**
+	 * Returns a date value
+	 * @return
+	 */
 	public Date getDateValue() {
 		return (Date) dateValue.clone();
 	}
 
+	/**
+	 * Sets a date value
+	 */
 	public void setDateValue(Date dateValue) {
 		this.dateValue = (Date) dateValue.clone();
 	}
