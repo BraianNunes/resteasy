@@ -3,8 +3,10 @@ package fr.gpereira.poc.resteasy;
 import java.util.HashSet;
 import java.util.Set;
 
-// TODO use javax.ws.rs.Application instead
 import javax.ws.rs.core.Application;
+
+import fr.gpereira.poc.resteasy.v1x.resource.FakeTestResource;
+// TODO use javax.ws.rs.Application instead
 
 /**
  * This class is used to register REST WS resources.
@@ -19,7 +21,7 @@ public class POCApplication extends Application {
 	private final HashSet<Object> singletons = new HashSet<Object>();
 
 	public POCApplication() {
-		singletons.add(new TestResource());
+		singletons.add(new FakeTestResource());
 	}
 
 	@Override

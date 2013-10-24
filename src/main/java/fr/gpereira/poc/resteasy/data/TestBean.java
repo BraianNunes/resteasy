@@ -1,9 +1,15 @@
-package fr.gpereira.poc.resteasy;
+package fr.gpereira.poc.resteasy.data;
 
 import java.util.Date;
 
 import com.google.common.base.Objects;
 
+/**
+ * Test Bean 
+ * 
+ * @author gpereira
+ *
+ */
 public final class TestBean {
 	private String id;
 	private String stringValue;
