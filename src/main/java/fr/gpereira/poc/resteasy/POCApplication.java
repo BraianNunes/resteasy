@@ -18,7 +18,7 @@ import fr.gpereira.poc.resteasy.v1x.resource.FakeTestResource;
  */
 public class POCApplication extends Application {
 
-	private final HashSet<Object> singletons = new HashSet<Object>();
+	private final Set<Object> singletons = new HashSet<>();
 
 	public POCApplication() {
 		singletons.add(new FakeTestResource());
@@ -26,8 +26,7 @@ public class POCApplication extends Application {
 
 	@Override
 	public Set<Class<?>> getClasses() {
-		HashSet<Class<?>> set = new HashSet<Class<?>>();
-		return set;
+		return new HashSet<Class<?>>();
 	}
 
 	@Override

@@ -20,13 +20,16 @@ import fr.gpereira.poc.resteasy.data.TestBean;
 @Path("v1.x/test")
 public class FakeTestResource implements TestResource {
 
+	private static final int FAKE_INT = 42;
+	private static final String FAKE_STRING = "String";
+	
 	private static final Map<String, TestBean> beans = new HashMap<>();
 	{
-		beans.put("1", new TestBean("1", "String", 42, true, new Date()));
-		beans.put("2", new TestBean("2", "String", 42, true, new Date()));
-		beans.put("3", new TestBean("3", "String", 42, true, new Date()));
-		beans.put("4", new TestBean("4", "String", 42, true, new Date()));
-		beans.put("5", new TestBean("5", "String", 42, true, new Date()));
+		beans.put("1", new TestBean("1", FAKE_STRING, FAKE_INT, true, new Date()));
+		beans.put("2", new TestBean("2", FAKE_STRING, FAKE_INT, true, new Date()));
+		beans.put("3", new TestBean("3", FAKE_STRING, FAKE_INT, true, new Date()));
+		beans.put("4", new TestBean("4", FAKE_STRING, FAKE_INT, true, new Date()));
+		beans.put("5", new TestBean("5", FAKE_STRING, FAKE_INT, true, new Date()));
 	}
 
 	@Override

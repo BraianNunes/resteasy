@@ -5,10 +5,10 @@ import java.util.Date;
 import com.google.common.base.Objects;
 
 /**
- * Test Bean 
+ * Test Bean
  * 
  * @author gpereira
- *
+ * 
  */
 public final class TestBean {
 	private String id;
@@ -27,7 +27,7 @@ public final class TestBean {
 		this.stringValue = stringValue;
 		this.intValue = intValue;
 		this.boolValue = boolValue;
-		this.dateValue = dateValue;
+		this.dateValue = (Date) dateValue.clone();
 	}
 
 	public String getId() {
@@ -63,11 +63,11 @@ public final class TestBean {
 	}
 
 	public Date getDateValue() {
-		return dateValue;
+		return (Date) dateValue.clone();
 	}
 
 	public void setDateValue(Date dateValue) {
-		this.dateValue = dateValue;
+		this.dateValue = (Date) dateValue.clone();
 	}
 
 	@Override
@@ -77,12 +77,15 @@ public final class TestBean {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		TestBean other = (TestBean) obj;
 		return Objects.equal(id, other.id);
 	}
